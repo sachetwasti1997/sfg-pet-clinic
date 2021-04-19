@@ -14,4 +14,8 @@ public interface OwnerService {
 
     Set<Owner> findAll();
 
+    void delete(Owner owner);
+
+    void deleteById(Long id);
+
 }
