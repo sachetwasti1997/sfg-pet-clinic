@@ -6,4 +6,4 @@ class Pet (
     var petType: PetType ?= null,
     var owner: Owner ?= null,
     var birtthDate: LocalDate ?= null
-)
+) : BaseEntity()
