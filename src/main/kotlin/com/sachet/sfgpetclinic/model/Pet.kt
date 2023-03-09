@@ -1,8 +1,10 @@
 package com.sachet.sfgpetclinic.model
 
+import jakarta.persistence.CascadeType
 import jakarta.persistence.Entity
 import jakarta.persistence.JoinColumn
 import jakarta.persistence.ManyToOne
+import jakarta.persistence.OneToMany
 import java.time.LocalDate
 
 @Entity
@@ -14,5 +16,7 @@ class Pet (
     @ManyToOne
     @JoinColumn(name="owner_id")
     var owner: Owner ?= null,
-    var birthDate: LocalDate ?= null
+    var birthDate: LocalDate ?= null,
+    @OneToMany(cascade = [CascadeType.ALL], mappedBy = "pet")
+    var visits: HashSet<Visit> = HashSet()
 ) : BaseEntity()
