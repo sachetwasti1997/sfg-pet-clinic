@@ -13,7 +13,7 @@ class OwnerServiceImpl(
         return ownerRepository.findByLastName(lastName)
     }
 
-    override fun findById(id: Long): Owner {
+    override fun findById(id: Long): Owner? {
         return ownerRepository.findById(id).orElse(null)
     }
 

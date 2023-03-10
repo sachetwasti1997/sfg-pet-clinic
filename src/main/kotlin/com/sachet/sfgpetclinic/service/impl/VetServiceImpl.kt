@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service
 class VetServiceImpl(
     val vetRepository: VetRepository
 ) : VetService {
-    override fun findById(id: Long): Vet {
+    override fun findById(id: Long): Vet? {
         return vetRepository.findById(id).get()
     }
 

@@ -5,10 +5,10 @@ import com.sachet.sfgpetclinic.model.Speciality
 
 interface SpecialityService {
 
-    fun findById(id: Long): Speciality
+    fun findById(id: Long): Speciality?
     fun findAll(): Set<Speciality>
-    fun save(petType: PetType): PetType
-    fun delete(petType: PetType)
+    fun save(speciality: Speciality): Speciality
+    fun delete(speciality: Speciality)
     fun deleteById(id: Long)
 
 }
