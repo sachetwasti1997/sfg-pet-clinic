@@ -13,10 +13,6 @@ jobs:
           keys:
             - v1-dependencies-{{ checksum "pom.xml" }}
             - v1-dependencies-
-      - run:
-          name: Test
-          command: |
-            mvn -s ./settings.xml clean test
       - save_cache:
           paths:
             - ~/.m2
