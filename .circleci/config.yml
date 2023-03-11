@@ -40,7 +40,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.mvnw
-          key: v1-dependencies-{{ checksum "build.gradle" }}
+          key: v1-dependencies-{{ checksum "mvnw.cmd" }}
 
       # run tests!
       - run: ./mvnw
